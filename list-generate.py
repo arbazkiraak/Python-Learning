@@ -3,8 +3,8 @@
 import sys,time
 
 if len(sys.argv) <  3:
-	print """ Usage : list-generate.py name wordlist"""
-  print """ For Save : list-generate.py name wordlist > output.txt"""
+	# """ Usage : list-generate.py name wordlist"""
+  #""" For Save : list-generate.py name wordlist > output.txt"""
 	sys.exit(0)
 
 
