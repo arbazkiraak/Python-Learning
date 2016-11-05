@@ -7,7 +7,7 @@ filtered = []
 line = open("words.txt","r").readlines()
 
 for l in line:
-	if l.startswith("blog") is False:
+	if l.startswith("blog") is False and l.startswith("Blog") is False:
 		l = l.rstrip("\n")
 		l = l.rstrip("\r")
 		filtered.append(l)
