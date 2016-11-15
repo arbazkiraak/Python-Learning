@@ -17,7 +17,7 @@ So Final Expression :  \d{1,5}\s\w+\s\w+\.
 \D -> Something which is not digit
 \s -> space
 \S -> something which is not space 
-. -> Anything
+. -> Anything except newline
 \W -> Something which is not char
 \w -> Char
 
@@ -98,3 +98,18 @@ print splitFound
 subFound = patFinder1.sub('Real Text', strToSearch)
 print subFound
 
+--------------------------------------------------
+
+('(Je[nnifer|nny|n]{1,6}\s\w+\s)',re.IGNORECASE)
+
+find 3 Names :
+
+Jennifer
+Jenny
+Jen
+Which is 1 to 6 Char Long
+then space
+then Char
+then space
+
+---------------------------------------------------------------------
