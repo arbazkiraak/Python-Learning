@@ -1,0 +1,91 @@
+EX :  123 Main St.
+
+Solution :
+
+\d{1,5}  -> Digits btw 1 to 5 i.e (123)
+\s -> Space
+\w -> char 
+\w+ -> char one or more (A-Z) Main
+\s -> Space
+\w+ -> Char St
+\. -> .
+
+So Final Expression :  \d{1,5}\s\w+\s\w+\.
+
+-----------------------------------------------
+'Jennifer\s\w+\s'
+
+If we use Above Expression , Which says  Jennifer [Space] [A-Z Char] [Space]
+
+------------------------------------------------
+
+? -> Looking for 0 or 1 repeatitions
+* -> Looking for 0 or more repeatitions
+{n}\d{5} -> Looking for 5 digit long
+
+--------------------------------------------------
+\$\d*\.\d{2} -> Searching for "$" Sign in code followed by digit then "." then 2 Digits
+
+$100.00
+
+--------------------------------------------------
+
+\e -> Escape
+\f -> form Feed
+\r -> Carriage Return
+\t -> Tab
+
+--------------------------------------------------
+
+Calender Calendar
+
+Calend[ae]r
+
+-----------------------------------------------------
+[a-z] -> all lower case letters
+[0-9] -> Digits from 0 to 9
+[A-Fa-t0-4] -> Uppercase A to F then lower case a to t then digit 0 to 4
+
+--------------------------------------------------------
+
+| -> OR
+
+(Jennifer | Jen | Jenny)\b\w+\b
+Je(nnifer|nny|n){1,6}\s\w+\s
+
+----------------------------------------------------------
+Randomchar.txt
+
+Aa1B3b2c#d$e*f/g } Aa1B + -G?
+
+CODE :
+
+import re
+ 
+f = open("randomchar.txt")
+strToSearch = " "
+
+for line in f:
+	strToSearch += line
+
+print strToSearch
+
+patFinder1 = re.compile('Aa1B')
+
+findPat1 = re.search(patFinder1,strToSearch)
+print findPat1.group()
+print findPat1.start()
+print findPat1.end()
+print findPat1.span()
+
+findPat1 = re.findall(patFinder1,strToSearch)
+
+for i in findPat1:
+	print i
+
+splitFound = patFinder1.split(strToSearch)
+print splitFound
+
+subFound = patFinder1.sub('Real Text', strToSearch)
+print subFound
+
