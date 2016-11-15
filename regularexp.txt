@@ -12,6 +12,15 @@ Solution :
 
 So Final Expression :  \d{1,5}\s\w+\s\w+\.
 
+
+\d -> digit
+\D -> Something which is not digit
+\s -> space
+\S -> something which is not space 
+. -> Anything
+\W -> Something which is not char
+\w -> Char
+
 -----------------------------------------------
 'Jennifer\s\w+\s'
 
